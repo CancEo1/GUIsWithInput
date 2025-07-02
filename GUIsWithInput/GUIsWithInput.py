@@ -23,6 +23,8 @@ ttk.Label(frame, text="Monthly Investment").pack()
 investmentText = tk.StringVar()
 investmentEntry = ttk.Entry(frame, width=25, textvariable=investmentText)
 
+# This is needed to actually display the Entry field. 
+# Text did not say that
 investmentEntry.pack()
 
 # future value read-only
@@ -32,12 +34,12 @@ ttk.Label(frame, text="Future Value").pack()
 fvText = tk.StringVar()
 fvEntry = ttk.Entry(frame, width=25, textvariable=fvText, state="readonly")
 
+# Same thing here
 fvEntry.pack()
 
 # how to get or set a string in a text entry field
 investment = investmentText.get()
 fvText.set("$2,000")
-
 
 root.mainloop()
 
